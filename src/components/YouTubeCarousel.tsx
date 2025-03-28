@@ -10,8 +10,9 @@ import {
 
 // Example video IDs - replace with your own
 const videoIds = [
-  'igDxjwdS4z8', // New shorts video
-  'OCjS-ftnv8o',
+  'e1RERQ4jwm8',
+  //'igDxjwdS4z8', // New shorts video
+  //'OCjS-ftnv8o',
 ];
 
 const YouTubeCarousel = () => {
@@ -25,6 +26,8 @@ const YouTubeCarousel = () => {
     },
   };
 
+  const isSingleVideo = videoIds.length === 1;
+
   return (
     <div className="w-full mx-auto p-4">
       {/* Carousel container */}
@@ -34,20 +37,20 @@ const YouTubeCarousel = () => {
         
         <CarouselContent>
           {videoIds.map((videoId, index) => (
-            <CarouselItem key={videoId} className="md:basis-1/2 lg:basis-1/3">
+            <CarouselItem
+              key={videoId}
+              className={
+                isSingleVideo ? 'w-full flex justify-center' : 'md:basis-1/2 lg:basis-1/3'
+              }
+            >
               <div className="p-1">
-                {/* Dynamically set the width of the container */}
                 <div
                   className={`${
-                    index === 4 ? 'w-[70%]' : 'w-[90%]'
+                    isSingleVideo ? 'w-full' : index === 4 ? 'w-[70%]' : 'w-[95%]'
                   } mx-auto rounded-lg overflow-hidden shadow-lg`}
                 >
                   {/* Player fills 100% of its parent */}
-                  <YouTube
-                    videoId={videoId}
-                    opts={opts}
-                    className="w-full"
-                  />
+                  <YouTube videoId={videoId} opts={opts} className="w-full" />
                 </div>
               </div>
             </CarouselItem>
