@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loyahdevs Portfolio</title>
+    <meta name="description" content="loyahdevs Portfolio" />
+    <meta name="author" content="Jaxon" />
+    <meta property="og:image" content="/og-image.png" />
+    <style>
+      /* Global Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        max-width: 100%;
+      }
+
+      /* Container with padding */
+      body {
+        padding: 0;
+        max-width: 100%;
+        scroll-behavior: smooth;
+      }
+
+      /* Responsive styles for smaller screens */
+      @media (max-width: 600px) {
+        body {
+          transform-origin: top center;
+        }
+      }
+
+      /* Scrollbar hiding */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      body {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      /* Remove focus ring globally */
+      [data-state="open"],
+      [data-state="closed"],
+      button,
+      *:focus-visible {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
