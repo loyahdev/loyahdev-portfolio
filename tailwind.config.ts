@@ -1,3 +1,4 @@
+//right config
 import type { Config } from "tailwindcss";
 import { types } from "util";
 
