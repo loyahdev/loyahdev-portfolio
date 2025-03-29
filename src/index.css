@@ -7,7 +7,7 @@
     @apply bg-gradient-dark text-white min-h-screen relative;
     background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
                      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                     radial-gradient(circle at center, #131E1A 0%, #0B1412 80%, #20082A 100%);
+                     radial-gradient(circle at center, #131E1A 0%, #0B1412 80%);
     background-size: 20px 20px, 20px 20px, 100% 100%;
     background-position: center;
 }
