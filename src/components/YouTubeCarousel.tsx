@@ -32,8 +32,8 @@ const YouTubeCarousel = () => {
     <div className="w-full mx-auto p-4">
       {/* Carousel container */}
       <Carousel className="w-full relative">
-        <CarouselPrevious className="absolute ml-4 sm:ml-3 top-1/2 transform -translate-y-1/2 z-10 bg-opacity-60 rounded-full p-2" />
-        <CarouselNext className="absolute mr-4 sm:mr-3 top-1/2 transform -translate-y-1/2 z-10 bg-opacity-60 rounded-full p-2" />
+        {/*<CarouselPrevious className="absolute ml-4 sm:ml-3 top-1/2 transform -translate-y-1/2 z-10 bg-opacity-60 rounded-full p-2" />
+        <CarouselNext className="absolute mr-4 sm:mr-3 top-1/2 transform -translate-y-1/2 z-10 bg-opacity-60 rounded-full p-2" />*/}
         
         <CarouselContent>
           {videoIds.map((videoId, index) => (
